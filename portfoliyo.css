@@ -127,7 +127,7 @@ body{
     border-bottom: 2px solid #3a3a3a;
     margin-bottom: 20px;
     padding-bottom: 20px;
-    position: sticky;
+    /* position: sticky; */
     top: 0px;
     background-color:#2a2a2a;
     z-index: 1000;
@@ -136,7 +136,7 @@ body{
 
 nav{
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     gap: 40px;
 }
 
@@ -317,6 +317,19 @@ nav a{
     margin-bottom: 15px;
 }
 
+.card img{
+    height: 24px;
+    width: 24px;
+    /* margin-left: 8px; */
+    margin-right: 20px;
+    filter: grayscale(1) invert(0.8);
+    transition: filter 0.3s ease;
+}
+
+.card a{
+    margin: 10px;
+}
+
 .card span{
     background-color: rgba(255, 191, 0, 0.1);
     color: #FFBF00;
@@ -326,7 +339,74 @@ nav a{
 
 }
 
-@media screen and (max-width:800px){
+.project-links{
+
+    display:flex;
+    gap:10px;
+    margin:15px 0;
+    flex-wrap:wrap;
+}
+
+.project-links a{
+    flex:1 1 140px;
+    min-width: 140px;
+    text-align: center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    /* gap:8px; */
+    text-decoration:none;
+    padding:12px;
+    border-radius:10px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.github-btn{
+    background:#24292e;
+    color:#fff;
+}
+
+.github-btn img{
+    width:20px;
+    height:20px;
+    filter:invert(1);
+}
+
+.github-btn:hover{
+    background:#000;
+    transform:translateY(-3px);
+}
+
+.live-btn{
+    background:#0d6efd;
+    color:#fff;
+}
+
+.live-btn:hover{
+    background:#0b5ed7;
+    transform:translateY(-3px);
+}
+
+.tech-stack{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+.tech-stack span{
+    padding:3px 5px;
+    border-radius:20px;
+    font-size:10px;
+    font-weight:500;
+    background-color: rgba(255, 191, 0, 0.1);
+    color: #FFBF00;
+    
+}
+
+
+
+@media screen and (max-width:768px){
     .main-container{
         grid-template-columns: 1fr;
         padding: 20px;
@@ -336,13 +416,35 @@ nav a{
         position: static;
         height: auto;
     }
+
+    .project-container{
+    grid-template-columns:1fr;
+    }
+
+    /* .project img{
+    height:220px;
+     } */
+
+     nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    justify-content:center;
+     }
+
+    #navigation{
+    padding:15px 0;
+    }
     
 }
 
- @media screen and (max-width:400px){ */
+
+
+
+ @media screen and (max-width:400px){ 
     .main-container{
         grid-template-columns: 1fr;
-        padding: 100px;
+        /* padding: 100px; */
     }
 
     .sidebare{
